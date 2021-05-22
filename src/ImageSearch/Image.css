@@ -1,0 +1,23 @@
+.imagediv{
+    background-color: rgb(75, 75, 75);
+    padding-left: 10%;
+    margin-top: 3%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.notsearch{
+    margin: 15%;
+    margin-left: 25%;
+}
+
+.navbar-brand{
+    margin-left: 36%;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.d-flex{
+    margin-left: 37%;
+}

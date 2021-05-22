@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import ImageSearch from './ImageSearch/ImageSearch'
+import './ImageSearch/Image.css'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import Player from './YoutubePlayer/Player'
+import Menu from './Menu'
+import "./YoutubePlayer/Player.css"
+import Quiz from './Quiz App/Quiz'
+import "./Quiz App/Quiz.css"
+import Data from './Quiz App/QuizData'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () =>{
+  return(
+    <div>
+      <BrowserRouter>
+        <Menu/>
+        <Switch>
+          <Route exact path="/" component={ImageSearch} />
+          <Route exact path="/Player" component={Player} />
+          <Route exact path="/quizapp" component={ () => <Quiz data={Data} /> } />
+        </Switch>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
